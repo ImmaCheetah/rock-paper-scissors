@@ -11,21 +11,48 @@
 </body>
 
 <script>
+    
     function getComputerChoice() {
+        // Use random to get number from 1 to 3
         let choice = Math.floor(Math.random() * 3) + 1;
+        console.log(choice);
 
         if (choice === 1) {
             return "Rock";
         } else if (choice === 2) {
             return "Paper";
-        } else {
+        } else if (choice === 3) {
             return "Scissors";
+        } else {
+            return "Error";
         }
     }
 
-    console.log(getComputerChoice());
+    function playRound(playerSelection, computerSelection) {
+        if (playerSelection === "Rock" && computerSelection === "Scissors") {
+            return "You won, Rock beats Scissors";
+        } else if (playerSelection === "Rock" && computerSelection === "Paper") {
+            return "You lost, Paper beats Rock";
+        } else if (playerSelection === "Paper" && computerSelection === "Rock") {
+            return "You won, Paper beats Rock";
+        } else if (playerSelection === "Paper" && computerSelection === "Scissors") {
+            return "You lost, Scissors beats Paper";
+        } else if (playerSelection === "Scissors" && computerSelection === "Rock") {
+            return "You lost, Rock beats Scissors";
+        } else if (playerSelection === "Scissors" && computerSelection === "Paper") {
+            return "You won, Scissors beats Paper";
+        } else if (playerSelection === computerSelection) {
+            return "Tie";
+        } else {
+            return "Error";
+        }
 
+    }
 
+    const playerSelection = "Paper";
+    const computerSelection = getComputerChoice();
+    console.log(playRound(playerSelection, computerSelection));
+    
 </script>
 
 

@@ -37,30 +37,23 @@
     function playRound(playerSelection, computerSelection) {
         if (playerSelection === "rock" && computerSelection === "scissors") {
             playerScore++;
-            console.log("You - ", + playerScore + " | Computer - ", + computerScore);
             return "You won, Rock beats Scissors";
         } else if (playerSelection === "rock" && computerSelection === "paper") {
             computerScore++;
-            console.log("You - ", + playerScore + " | Computer - ", + computerScore);
             return "You lost, Paper beats Rock";
         } else if (playerSelection === "paper" && computerSelection === "rock") {
             playerScore++;
-            console.log("You - ", + playerScore + " | Computer - ", + computerScore);
             return "You won, Paper beats Rock";
         } else if (playerSelection === "paper" && computerSelection === "scissors") {
             computerScore++;
-            console.log("You - ", + playerScore + " | Computer - ", + computerScore);
             return "You lost, Scissors beats Paper";            
         } else if (playerSelection === "scissors" && computerSelection === "rock") {
             computerScore++;
-            console.log("You - ", + playerScore + " | Computer - ", + computerScore);
             return "You lost, Rock beats Scissors";
         } else if (playerSelection === "scissors" && computerSelection === "paper") {
             playerScore++;
-            console.log("You - ", + playerScore + " | Computer - ", + computerScore);
             return "You won, Scissors beats Paper";
         } else if (playerSelection === computerSelection) {
-            console.log("You - ", + playerScore + " | Computer - ", + computerScore);
             return "Tie";
         } else {
             return "Error";
@@ -70,10 +63,23 @@
 
     function game() {
         console.log(playRound(getPlayerChoice(), getComputerChoice()));
+        console.log("You - ", + playerScore + " | Computer - ", + computerScore);
         console.log(playRound(getPlayerChoice(), getComputerChoice()));
+        console.log("You - ", + playerScore + " | Computer - ", + computerScore);
         console.log(playRound(getPlayerChoice(), getComputerChoice()));
+        console.log("You - ", + playerScore + " | Computer - ", + computerScore);
         console.log(playRound(getPlayerChoice(), getComputerChoice()));
+        console.log("You - ", + playerScore + " | Computer - ", + computerScore);
         console.log(playRound(getPlayerChoice(), getComputerChoice()));
+        console.log("You - ", + playerScore + " | Computer - ", + computerScore);
+
+        if (playerScore > computerScore) {
+            return "You won!";
+        } else if (computerScore > playerScore) {
+            return "You lost, yikes";
+        } else {
+            return "Tie";
+        }
     }
 
     let computerScore = 0;

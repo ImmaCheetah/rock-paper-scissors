@@ -14,10 +14,10 @@ function getComputerChoice() {
     }
 }
 
-function getPlayerChoice() {
-    let userInput = prompt("Enter your choice ").toLowerCase();
-    return userInput;    
-}
+// function getPlayerChoice() {
+//     let userInput = prompt("Enter your choice ").toLowerCase();
+//     return userInput;    
+// }
 
 
 function playRound(playerSelection, computerSelection) {
@@ -78,10 +78,10 @@ document.getElementById('rock').onclick = function(e) {
 
 const btn = document.querySelector('#rock');
 btn.addEventListener('click', () => {
-    console.log(getComputerChoice());
-    console.log(playRound());
-    console.log(playerSelection);   
-     
+    // console.log(getComputerChoice());
+    // console.log(playerSelection);
+    console.log(playRound(playerSelection, getComputerChoice()));
+          
 })
 
 // game();

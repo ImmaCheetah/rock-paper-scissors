@@ -72,8 +72,17 @@ let computerScore = 0;
 let playerScore = 0;
 
 
-document.getElementById('rock').onclick = function(e) {
+// document.getElementById('rock').onclick = function(e) {
+//     playerSelection = 'rock';
+// }
+
+rock = document.getElementById('rock');
+
+rock.addEventListener('click', selectRock);
+
+function selectRock() {
     playerSelection = 'rock';
+    console.log(playerSelection);
 }
 
 

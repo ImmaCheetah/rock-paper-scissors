@@ -77,6 +77,14 @@ let paper = document.getElementById('paper');
 let scissors = document.getElementById('scissors');
 
 let div = document.createElement('div');
+div.setAttribute('id','mainDiv');
+let showScore = document.createElement('h4');
+// div.appendChild(showScore);
+
+
+
+
+
 
 // Select rock event
 rock.addEventListener('click', selectRock);
@@ -91,17 +99,32 @@ function selectRock(e) {
     // console.log(playRound(playerSelection, getComputerChoice()));
     div.innerHTML = '<h3>'+(playRound(playerSelection, getComputerChoice()))+'</h3>';
     document.body.appendChild(div);
-    
+
+    showScore.style.color = 'blue';
+    showScore.innerHTML = '<h4>'+playerScore+'</h4';
+    mainDiv.appendChild(showScore);
 }
 
 function selectPaper(e) {
     playerSelection = 'paper';
-    console.log(playRound(playerSelection, getComputerChoice()));
+    // console.log(playRound(playerSelection, getComputerChoice()));
+    div.innerHTML = '<h3>'+(playRound(playerSelection, getComputerChoice()))+'</h3>';
+    document.body.appendChild(div);
+
+    showScore.style.color = 'blue';
+    showScore.innerHTML = '<h4>'+playerScore+'</h4';
+    mainDiv.appendChild(showScore);
 }
 
 function selectScissors(e) {
     playerSelection = 'scissors';
-    console.log(playRound(playerSelection, getComputerChoice()));
+    // console.log(playRound(playerSelection, getComputerChoice()));
+    div.innerHTML = '<h3>'+(playRound(playerSelection, getComputerChoice()))+'</h3>';
+    document.body.appendChild(div);
+
+    showScore.style.color = 'blue';
+    showScore.innerHTML = '<h4>'+playerScore+'</h4';
+    mainDiv.appendChild(showScore);
 }
 
 

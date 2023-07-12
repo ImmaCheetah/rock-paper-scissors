@@ -77,16 +77,31 @@ let playerScore = 0;
 // }
 
 rock = document.getElementById('rock');
+paper = document.getElementById('paper');
+scissors = document.getElementById('scissors');
 
+
+// Select rock event
 rock.addEventListener('click', selectRock);
+// Select paper event
+rock.addEventListener('click', selectPaper);
+// Select scissors event
+rock.addEventListener('click', selectScissors);
 
 function selectRock() {
     playerSelection = 'rock';
     console.log(playerSelection);
 }
 
+function selectPaper() {
+    playerSelection = 'paper';
+    console.log(playerSelection);
+}
 
-
+function selectScissors() {
+    playerSelection = 'scissors';
+    console.log(playerSelection);
+}
 
 
 

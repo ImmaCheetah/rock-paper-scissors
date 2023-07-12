@@ -76,6 +76,8 @@ let rock = document.getElementById('rock');
 let paper = document.getElementById('paper');
 let scissors = document.getElementById('scissors');
 
+let div = document.createElement('div');
+
 // Select rock event
 rock.addEventListener('click', selectRock);
 // Select paper event
@@ -83,9 +85,13 @@ paper.addEventListener('click', selectPaper);
 // Select scissors event
 scissors.addEventListener('click', selectScissors);
 
+
 function selectRock(e) {
     playerSelection = 'rock';
-    console.log(playRound(playerSelection, getComputerChoice()));
+    // console.log(playRound(playerSelection, getComputerChoice()));
+    div.innerHTML = '<h3>'+(playRound(playerSelection, getComputerChoice()))+'</h3>';
+    document.body.appendChild(div);
+    
 }
 
 function selectPaper(e) {

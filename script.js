@@ -107,6 +107,9 @@ function selectRock(e) {
     if (playerScore === 5){
         showResult.innerHTML = '<h4> You won! </h4>';
         mainDiv.appendChild(showResult);
+    } else if (computerScore === 5) {
+        showResult.innerHTML = '<h4> Computer won! </h4>';
+        mainDiv.appendChild(showResult);
     }
 }
 
@@ -121,7 +124,11 @@ function selectPaper(e) {
     mainDiv.appendChild(showScore);
 
     if (playerScore === 5){
-        showScore.innerHTML = '<h6> Ez money</h6>';
+        showResult.innerHTML = '<h4> You won! </h4>';
+        mainDiv.appendChild(showResult);
+    } else if (computerScore === 5) {
+        showResult.innerHTML = '<h4> Computer won! </h4>';
+        mainDiv.appendChild(showResult);
     }
 }
 
@@ -136,7 +143,11 @@ function selectScissors(e) {
     mainDiv.appendChild(showScore);
 
     if (playerScore === 5){
-        showScore.innerHTML = '<h6> Ez money</h6>';
+        showResult.innerHTML = '<h4> You won! </h4>';
+        mainDiv.appendChild(showResult);
+    } else if (computerScore === 5) {
+        showResult.innerHTML = '<h4> Computer won! </h4>';
+        mainDiv.appendChild(showResult);
     }
 }
 

@@ -85,17 +85,17 @@ scissors.addEventListener('click', selectScissors);
 
 function selectRock(e) {
     playerSelection = 'rock';
-    console.log(playerSelection);
+    console.log(playRound(playerSelection, getComputerChoice()));
 }
 
 function selectPaper(e) {
     playerSelection = 'paper';
-    console.log(playerSelection);
+    console.log(playRound(playerSelection, getComputerChoice()));
 }
 
 function selectScissors(e) {
     playerSelection = 'scissors';
-    console.log(playerSelection);
+    console.log(playRound(playerSelection, getComputerChoice()));
 }
 
 

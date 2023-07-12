@@ -72,33 +72,28 @@ let computerScore = 0;
 let playerScore = 0;
 
 
-// document.getElementById('rock').onclick = function(e) {
-//     playerSelection = 'rock';
-// }
-
-rock = document.getElementById('rock');
-paper = document.getElementById('paper');
-scissors = document.getElementById('scissors');
-
+let rock = document.getElementById('rock');
+let paper = document.getElementById('paper');
+let scissors = document.getElementById('scissors');
 
 // Select rock event
 rock.addEventListener('click', selectRock);
 // Select paper event
-rock.addEventListener('click', selectPaper);
+paper.addEventListener('click', selectPaper);
 // Select scissors event
-rock.addEventListener('click', selectScissors);
+scissors.addEventListener('click', selectScissors);
 
-function selectRock() {
+function selectRock(e) {
     playerSelection = 'rock';
     console.log(playerSelection);
 }
 
-function selectPaper() {
+function selectPaper(e) {
     playerSelection = 'paper';
     console.log(playerSelection);
 }
 
-function selectScissors() {
+function selectScissors(e) {
     playerSelection = 'scissors';
     console.log(playerSelection);
 }

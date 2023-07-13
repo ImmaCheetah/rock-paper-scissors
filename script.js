@@ -105,10 +105,12 @@ function selectRock(e) {
         showResult.innerHTML = '<h4> You won! </h4>';
         mainDiv.appendChild(showResult);
         disableBtn();
+        resetGame();
     } else if (computerScore === 5) {
         showResult.innerHTML = '<h4> Computer won! </h4>';
         mainDiv.appendChild(showResult);
         disableBtn();
+        resetGame();
     }
 }
 
@@ -126,10 +128,12 @@ function selectPaper(e) {
         showResult.innerHTML = '<h4> You won! </h4>';
         mainDiv.appendChild(showResult);
         disableBtn();
+        resetGame();
     } else if (computerScore === 5) {
         showResult.innerHTML = '<h4> Computer won! </h4>';
         mainDiv.appendChild(showResult);
         disableBtn();
+        resetGame();
     }
 }
 
@@ -147,10 +151,12 @@ function selectScissors(e) {
         showResult.innerHTML = '<h4> You won! </h4>';
         mainDiv.appendChild(showResult);
         disableBtn();
+        resetGame();
     } else if (computerScore === 5) {
         showResult.innerHTML = '<h4> Computer won! </h4>';
         mainDiv.appendChild(showResult);
         disableBtn();
+        resetGame();
     }
 }
 
@@ -158,4 +164,24 @@ function disableBtn() {
     rock.setAttribute("disabled", 1);
     paper.setAttribute("disabled", 1);
     scissors.setAttribute("disabled", 1);
+}
+
+function resetGame() {
+    let button = document.createElement('button');
+    button.textContent = 'Try Again';
+
+    button.addEventListener('click', resetText)
+    mainDiv.appendChild(button);
+
+    function resetText() {
+        div.innerHTML = '';
+        showScore.innerHTML = '';
+
+        rock.removeAttribute("disabled");
+        paper.removeAttribute("disabled");
+        scissors.removeAttribute("disabled");
+
+        playerScore = 0;
+        computerScore = 0;
+    }
 }

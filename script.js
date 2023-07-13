@@ -75,6 +75,7 @@ let rock = document.getElementById('rock');
 let paper = document.getElementById('paper');
 let scissors = document.getElementById('scissors');
 
+let container = document.querySelector('.container');
 let div = document.createElement('div');
 div.setAttribute('id','mainDiv');
 
@@ -95,7 +96,7 @@ function selectRock(e) {
     playerSelection = 'rock';
     // console.log(playRound(playerSelection, getComputerChoice()));
     div.innerHTML = '<h3>'+(playRound(playerSelection, getComputerChoice()))+'</h3>';
-    document.body.appendChild(div);
+    container.appendChild(div);
 
     showScore.style.color = 'blue';
     showScore.innerHTML = '<h4> You - '+playerScore+' - '+computerScore+' - Computer</h4>';
@@ -118,7 +119,7 @@ function selectPaper(e) {
     playerSelection = 'paper';
     // console.log(playRound(playerSelection, getComputerChoice()));
     div.innerHTML = '<h3>'+(playRound(playerSelection, getComputerChoice()))+'</h3>';
-    document.body.appendChild(div);
+    container.appendChild(div);
 
     showScore.style.color = 'blue';
     showScore.innerHTML = '<h4> You - '+playerScore+' - '+computerScore+' - Computer</h4>';
@@ -141,7 +142,7 @@ function selectScissors(e) {
     playerSelection = 'scissors';
     // console.log(playRound(playerSelection, getComputerChoice()));
     div.innerHTML = '<h3>'+(playRound(playerSelection, getComputerChoice()))+'</h3>';
-    document.body.appendChild(div);
+    container.appendChild(div);
 
     showScore.style.color = 'blue';
     showScore.innerHTML = '<h4> You - '+playerScore+' - '+computerScore+' - Computer</h4';

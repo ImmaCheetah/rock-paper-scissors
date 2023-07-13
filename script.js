@@ -47,32 +47,29 @@ function playRound(playerSelection, computerSelection) {
 
 }
 
-function game() {
-    console.log(playRound(getPlayerChoice(), getComputerChoice()));
-    // console.log("You - ", + playerScore + " | Computer - ", + computerScore);
-    // console.log(playRound(getPlayerChoice(), getComputerChoice()));
-    // console.log("You - ", + playerScore + " | Computer - ", + computerScore);
-    // console.log(playRound(getPlayerChoice(), getComputerChoice()));
-    // console.log("You - ", + playerScore + " | Computer - ", + computerScore);
-    // console.log(playRound(getPlayerChoice(), getComputerChoice()));
-    // console.log("You - ", + playerScore + " | Computer - ", + computerScore);
-    // console.log(playRound(getPlayerChoice(), getComputerChoice()));
-    // console.log("You - ", + playerScore + " | Computer - ", + computerScore);
+// function game() {
+//     console.log(playRound(getPlayerChoice(), getComputerChoice()));
+//     console.log("You - ", + playerScore + " | Computer - ", + computerScore);
+//     console.log(playRound(getPlayerChoice(), getComputerChoice()));
+//     console.log("You - ", + playerScore + " | Computer - ", + computerScore);
+//     console.log(playRound(getPlayerChoice(), getComputerChoice()));
+//     console.log("You - ", + playerScore + " | Computer - ", + computerScore);
+//     console.log(playRound(getPlayerChoice(), getComputerChoice()));
+//     console.log("You - ", + playerScore + " | Computer - ", + computerScore);
+//     console.log(playRound(getPlayerChoice(), getComputerChoice()));
+//     console.log("You - ", + playerScore + " | Computer - ", + computerScore);
 
-    if (playerScore > computerScore) {
-        return "You won!";
-    } else if (computerScore > playerScore) {
-        return "You lost, yikes";
-    } else {
-        return "Tie";
-    }
-}
+//     if (playerScore > computerScore) {
+//         return "You won!";
+//     } else if (computerScore > playerScore) {
+//         return "You lost, yikes";
+//     } else {
+//         return "Tie";
+//     }
+// }
 
 let computerScore = 0;
 let playerScore = 0;
-
-
-
 
 let rock = document.getElementById('rock');
 let paper = document.getElementById('paper');
@@ -107,9 +104,11 @@ function selectRock(e) {
     if (playerScore === 5){
         showResult.innerHTML = '<h4> You won! </h4>';
         mainDiv.appendChild(showResult);
+        disableBtn();
     } else if (computerScore === 5) {
         showResult.innerHTML = '<h4> Computer won! </h4>';
         mainDiv.appendChild(showResult);
+        disableBtn();
     }
 }
 
@@ -126,9 +125,11 @@ function selectPaper(e) {
     if (playerScore === 5){
         showResult.innerHTML = '<h4> You won! </h4>';
         mainDiv.appendChild(showResult);
+        disableBtn();
     } else if (computerScore === 5) {
         showResult.innerHTML = '<h4> Computer won! </h4>';
         mainDiv.appendChild(showResult);
+        disableBtn();
     }
 }
 
@@ -145,14 +146,16 @@ function selectScissors(e) {
     if (playerScore === 5){
         showResult.innerHTML = '<h4> You won! </h4>';
         mainDiv.appendChild(showResult);
+        disableBtn();
     } else if (computerScore === 5) {
         showResult.innerHTML = '<h4> Computer won! </h4>';
         mainDiv.appendChild(showResult);
+        disableBtn();
     }
 }
 
-
-
-
-
-// game();
+function disableBtn() {
+    rock.setAttribute("disabled", 1);
+    paper.setAttribute("disabled", 1);
+    scissors.setAttribute("disabled", 1);
+}
